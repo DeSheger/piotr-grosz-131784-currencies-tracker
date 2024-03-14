@@ -17,7 +17,6 @@ export class LogowanieComponent {
   login() {
     if (this.username === 'test' && this.password === 'test') {
       alert('Login successful!');
-      // Here you can redirect the user to another component or perform other actions upon successful login
     } else {
       alert('Invalid credentials!');
     }
