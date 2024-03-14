@@ -8,14 +8,13 @@ describe('LogowanieComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule], // Keep FormsModule here if your component uses forms
+      imports: [FormsModule], 
     })
-      // No need to declare standalone components or import them here
       .compileComponents();
 
-    fixture = TestBed.createComponent(LogowanieComponent); // This automatically handles standalone components
+    fixture = TestBed.createComponent(LogowanieComponent); 
     component = fixture.componentInstance;
-    fixture.detectChanges(); // Trigger initial data binding and lifecycle hooks
+    fixture.detectChanges(); 
   });
 
   it('should create', () => {
@@ -26,7 +25,7 @@ describe('LogowanieComponent', () => {
     spyOn(window, 'alert');
     component.username = 'test';
     component.password = 'test';
-    component.login(); // Assuming login doesn't need event argument
+    component.login(); 
     expect(window.alert).toHaveBeenCalledWith('Login successful!');
   });
 
@@ -34,7 +33,7 @@ describe('LogowanieComponent', () => {
     spyOn(window, 'alert');
     component.username = 'tes';
     component.password = 'test';
-    component.login(); // Assuming login doesn't need event argument
+    component.login(); 
     expect(window.alert).toHaveBeenCalledWith('Invalid credentials!');
   });
 });
